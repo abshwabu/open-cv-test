@@ -2,7 +2,10 @@ import cv2
 
 img = cv2.imread('galaxy.jpg',0) #read the image
 
-resize_image=cv2.resize(img,(1000,500))
+hight = img.shape[0]
+width = img.shape[1]
+
+resize_image=cv2.resize(img,(int(hight/2),int(width/2)))
 show_galaxy = cv2.imshow('glaxy',resize_image) #show the image
 
 cv2.waitKey(2000)
